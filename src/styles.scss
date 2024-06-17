@@ -5,7 +5,7 @@
 }
 
 @font-face {
-    font-family: Comforta;
+    font-family: Comfortaa;
     src: url('./assets/fonts/Comfortaa-VariableFont_wght.ttf');
 }
 
@@ -24,3 +24,18 @@ $custom-colors: (
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+// apply fonts
+h1 {
+    font-family: BubbleBoddy;
+}
+
+a {
+    font-family: Comfortaa;
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    font-family: Comfortaa;
+}

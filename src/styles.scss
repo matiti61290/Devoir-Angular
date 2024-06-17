@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: BubbleBoddy;
+    src: url('./assets/fonts/bubbleboddyneue-regular\ trial.ttf');
+}
+
+@font-face {
+    font-family: Comforta;
+    src: url('./assets/fonts/Comfortaa-VariableFont_wght.ttf');
+}
+
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+
+$custom-colors: (
+    'header' : #f9d0a3,
+    'yellow' : #fdd90b,
+    'footer' : #151217,
+    'red' : #da001e
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';

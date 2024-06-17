@@ -11,7 +11,13 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  
+
+  navbarCollapsed: boolean = true;
+
   constructor( private router: Router ) { }
 
+  // Toggle navbar
+  toggleNavbar() {
+    this.navbarCollapsed = !this.navbarCollapsed
+  }
 }

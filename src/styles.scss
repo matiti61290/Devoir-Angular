@@ -1,3 +1,4 @@
+//import font families
 @font-face {
     font-family: BubbleBoddy;
     src: url('./assets/fonts/bubbleboddyneue-regular\ trial.ttf');
@@ -8,14 +9,16 @@
     src: url('./assets/fonts/Comfortaa-VariableFont_wght.ttf');
 }
 
+
+// add custom colors
 @import '../node_modules/bootstrap/scss/functions';
 @import '../node_modules/bootstrap/scss/variables';
 
 $custom-colors: (
-    'header' : #f9d0a3,
-    'yellow' : #fdd90b,
-    'footer' : #151217,
-    'red' : #da001e
+    'button' : #f9d0a3,
+    'header' : #fdd90b,
+    'border' : #151217,
+    'background' : #da001e
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);

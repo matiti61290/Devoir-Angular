@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { NavbarComponent } from '../navbar/navbar.component';
+import { NavbarComponent } from '../component/navbar/navbar.component';
 
 @Component({
   selector: 'app-header',

@@ -1,10 +1,10 @@
-<nav class="navbar navbar-expand-lg bg-header">
+<nav class="navbar navbar-expand-md bg-header">
     <div class="container-fluid bg-header ">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" 
         (click)="toggleNavbar()">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-collapse d-flex justify-content-center"  id="navbarSupportedContent"  [class.collapse]="navbarCollapsed">
+        <div  [class.collapse]="navbarCollapsed" class="navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav fs-5 fw-bold gap-5">
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/about">A propos</a>

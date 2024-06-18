@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Product } from '../model/product';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-product',
@@ -8,5 +11,12 @@ import { Component } from '@angular/core';
   styleUrl: './product.component.scss'
 })
 export class ProductComponent {
+@Input() product!: Product;
 
+constructor(private router: Router){}
+
+  // routing until the product by id
+  onViewProduct() {
+    this.router.navigateByUrl(`products/${this.product.id}`)
+  }
 }

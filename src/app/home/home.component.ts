@@ -3,12 +3,16 @@ import { ProductsService } from '../services/products.service';
 import { Product } from '../model/product';
 import { Router } from '@angular/router';
 import { ProductComponent } from '../product/product.component';
+import { SortByPricePipe } from '../pipe/sort-by-price.pipe';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
-    ProductComponent
+    ProductComponent,
+    SortByPricePipe,
+    CommonModule
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
@@ -23,7 +27,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     // get products from the service
     this.products = this.productService.getProducts()
-  }
+  };
 
+ sortByPrice: "asc" | "desc" = "asc";
 
 }

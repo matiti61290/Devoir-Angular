@@ -1,3 +1,6 @@
 <div class="product-view">
+    <h2>{{ product.name }}</h2>
+    <img [src]="product.imageUrl" [alt]="product.name">
+    <h3>{{ product.price | currency: 'EUR' }}</h3>
     <button (click)="onViewProduct()">Voir plus</button>
 </div>

@@ -22,10 +22,10 @@ export class ProductsService {
       products.products.obelixFigure.description
     ),
     new Product(
-      products.products.obelixFigure.picture,
-      products.products.obelixFigure.name,
-      products.products.obelixFigure.price,
-      products.products.obelixFigure.description
+      products.products.idefixFigure.picture,
+      products.products.idefixFigure.name,
+      products.products.idefixFigure.price,
+      products.products.idefixFigure.description
     ),
   ]
 

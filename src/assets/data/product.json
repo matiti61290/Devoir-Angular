@@ -3,21 +3,21 @@
         "asterixFigure": 
             {
                "name": "Asterix",
-                "price": "35",
+                "price": 35,
                 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et rhoncus turpis. Vivamus sit amet lectus rhoncus, pretium ante ac.",
                 "picture": "https://boutique.asterix.com/35-pdt_540/figurine-asterix-bulle-ca-m-enerve.jpg"
             },
         "obelixFigure":
             {
                 "name": "Obelix",
-                "price": "50",
+                "price": 50,
                 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et rhoncus turpis. Vivamus sit amet lectus rhoncus, pretium ante ac.",
                 "picture": "https://boutique.asterix.com/169-pdt_540/figurine-obelix-bulle-oui-je-boude-et-alors-.jpg"
             },
         "idefixFigure" :
             {
                 "name": "Idefix",
-                "price": "20",
+                "price": 20,
                 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et rhoncus turpis. Vivamus sit amet lectus rhoncus, pretium ante ac.",
                 "picture": "https://boutique.asterix.com/42-pdt_540/figurine-idefix-bulle-coeur.jpg"
             }

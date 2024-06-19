@@ -1,3 +1,11 @@
-@for (product of products; track product.name) {
+<button (click)="sortByPrice = sortByPrice === 'asc' ? 'desc' : 'asc'">Tri par prix</button>
+
+<!-- @for (product of products; track product.name) {
     <app-product [product]="product"/>
-}
+} -->
+
+<ul>
+    <li *ngFor="let product of products | sortByPrice:sortByPrice">
+        <app-product [product]="product"></app-product>
+    </li>
+</ul>

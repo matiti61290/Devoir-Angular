@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import * as products from "../../assets/data/product.json";
 import { Product } from '../model/product';
+import { Observable, of } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -30,8 +32,8 @@ export class ProductsService {
   ]
 
   // return product from the service
-  getProducts() : Product[] {
-    return [...this.products];
+  getProducts() : Observable <Product[]> {
+    return of(this.products);
   }
 
   // return product from the service by id

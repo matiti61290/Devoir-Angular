@@ -1,11 +1,15 @@
-<button (click)="sortByPrice = sortByPrice === 'asc' ? 'desc' : 'asc'">Tri par prix</button>
+<div class="content">
+    <input type="text" [formControl]="searchControl" />
+    <button (click)="sortByPrice = sortByPrice === 'asc' ? 'desc' : 'asc'">Tri par prix</button>
 
-<!-- @for (product of products; track product.name) {
-    <app-product [product]="product"/>
-} -->
-
-<ul>
-    <li *ngFor="let product of products | sortByPrice:sortByPrice">
-        <app-product [product]="product"></app-product>
-    </li>
-</ul>
+    <div class="container-fluid">
+        <div>
+        <h1>Nos produits</h1>
+        <ul class="d-flex flex-row">
+            <li *ngFor="let product of products | sortByPrice: sortByPrice; track $index" >
+                <app-product [product]="product"></app-product>
+            </li>
+        </ul>
+        </div>
+    </div>
+</div>

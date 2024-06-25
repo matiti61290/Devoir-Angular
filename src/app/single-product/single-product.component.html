@@ -1,6 +1,18 @@
-<div class="content">
-    <img [src]="product.imageUrl" [alt]="product.name">
-    <h1>{{ product.name }}</h1>
-    <h2>{{ product.price | currency: 'EUR'}}</h2>
-    <p>{{ product.description }}</p>
+<div class="bg-background px-2 px-lg-5">
+    <div class="content bg-light mx-2 mx-lg-5 pb-3">
+        <div class="container-fluid">
+            <div class="row d-flex align-items-center pt-4">
+                <div class="col-12 col-lg-6">
+                    <img class="img-fluid border border-around border-3 rounded-1" [src]="product.imageUrl" [alt]="product.name">
+                </div>
+                <div class="col-12 col-lg-6">
+                    <h1>{{ product.name }}</h1>
+                    <p>{{ product.price | currency: 'EUR'}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="pb-2 mx-4">
+            <p>{{ product.description }}</p>
+        </div>
+    </div>
 </div>

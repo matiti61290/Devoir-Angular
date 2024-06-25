@@ -7,7 +7,7 @@ import { SingleProductComponent } from './single-product/single-product.componen
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'products/:id', component: SingleProductComponent },
+    { path: 'products/:name', component: SingleProductComponent },
     { path: 'about', component: AboutComponent},
     { path: 'contact', component: ContactComponent}
 ];

@@ -21,6 +21,6 @@ constructor(private router: Router){}
 
   // routing until the product by id
   onViewProduct() {
-    this.router.navigateByUrl(`products/${this.product.id}`)
+    this.router.navigateByUrl(`products/${this.product.name}`)
   }
 }

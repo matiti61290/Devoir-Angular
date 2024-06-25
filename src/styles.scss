@@ -18,7 +18,7 @@
 $custom-colors: (
     'button' : #f9d0a3,
     'header' : #fdd90b,
-    'border' : #151217,
+    'around' : #151217,
     'background' : #da001e
 );
 
@@ -28,8 +28,12 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 // apply fonts
 
-body{
-    min-height: 100vh;
+// body{
+//     min-height: 100vh;
+// }
+
+*{
+    margin: 0;
 }
 
 h1 {

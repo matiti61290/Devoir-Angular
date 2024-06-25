@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
 import { ProductsService } from '../services/products.service';
 import { Product } from '../model/product';
-import { Router } from '@angular/router';
 import { ProductComponent } from '../product/product.component';
 import { SortByPricePipe } from '../pipe/sort-by-price.pipe';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -12,16 +12,17 @@ import { CommonModule } from '@angular/common';
   imports: [
     ProductComponent,
     SortByPricePipe,
-    CommonModule
+    CommonModule,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-
   products!: Product[];
+  filter = '';
+  sortByPrice: "asc" | "desc" = "asc";
 
-  constructor( 
+  constructor(
     private productService: ProductsService) {}
 
   ngOnInit(): void {
@@ -29,6 +30,13 @@ export class HomeComponent implements OnInit {
     this.products = this.productService.getProducts()
   };
 
- sortByPrice: "asc" | "desc" = "asc";
+  filterProducts(filter: string): void {
+    this.filter = filter;
+    if (!filter) {
+      this.products = this.productService.getProducts();
+      return;
+    }
 
+    this.products = this.productService.getProducts().filter(product => product.name.toLowerCase().includes(filter.toLowerCase().trim()));
+  }
 }

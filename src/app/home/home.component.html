@@ -1,11 +1,23 @@
-<button (click)="sortByPrice = sortByPrice === 'asc' ? 'desc' : 'asc'">Tri par prix</button>
+<div>
+  <div class="bg-background px-5">
+    <div class="home-product bg-light mx-5 ">
+      <div class="input-group p-3">
+          <input type="text" class="form-control fs-5" placeholder="Filter by product name" #searchInput (keyup.enter)="filterProducts(searchInput.value)">
+          <button class="btn btn-outline-around fs-3" type="button" (click)="filterProducts(searchInput.value)">Search</button>
+          <button class="btn btn-outline-around fs-3" type="button" (click)="sortByPrice = sortByPrice === 'asc' ? 'desc' : 'asc'">Tri par prix</button>
+      </div>
 
-<!-- @for (product of products; track product.name) {
-    <app-product [product]="product"/>
-} -->
-
-<ul>
-    <li *ngFor="let product of products | sortByPrice:sortByPrice">
-        <app-product [product]="product"></app-product>
-    </li>
-</ul>
+      <div class="container">
+        <div class="row d-flex flex-row justify-content-center">
+            @for (product of products | sortByPrice:sortByPrice; track $index) {
+              <div class="col-12 col-md-6 col-lg-4 my-3 ">
+                  <div class="border border-around border-3">
+                    <app-product [product]="product" ></app-product>
+                </div>
+              </div>
+            }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

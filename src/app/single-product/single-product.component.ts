@@ -31,7 +31,7 @@ export class SingleProductComponent implements OnInit{
 
   // get product from the service by id
   private getProduct() {
-    const productId = this.route.snapshot.params['id'];
-    this.product = this.productsService.getProductsById(productId)
+    const productName = this.route.snapshot.params['name'];
+    this.product = this.productsService.getProductsById(productName)
   }
 }

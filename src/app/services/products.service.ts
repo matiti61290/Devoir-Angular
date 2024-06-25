@@ -36,8 +36,8 @@ export class ProductsService {
   }
 
   // return product from the service by id
-  getProductsById(productId: string): Product {
-    const foundProduct = this.products.find(product => product.id === productId);
+  getProductsById(productName: string): Product {
+    const foundProduct = this.products.find(product => product.name === productName);
     if (!foundProduct) {
       throw new Error ('Product not found');
     }

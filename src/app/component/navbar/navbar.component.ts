@@ -24,6 +24,7 @@ export class NavbarComponent implements OnInit {
 
   // Close the menu when screensize > 
   ngOnInit(): void {
+    // check if burger menu is opened
     this.breakpointObserver.observe(['(max-width: 800px)']).subscribe((result: BreakpointState) => {
       if (result.matches) {
         this.navbarCollapsed = true;

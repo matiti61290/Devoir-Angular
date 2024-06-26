@@ -19,7 +19,7 @@ export class ProductComponent {
 
 constructor(private router: Router){}
 
-  // routing until the product by id
+  // routing until the product by name
   onViewProduct() {
     this.router.navigateByUrl(`products/${this.product.name}`)
   }

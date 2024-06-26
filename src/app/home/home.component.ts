@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit {
     this.products = this.productService.getProducts()
   };
 
+  // method for search by name
   filterProducts(filter: string): void {
     this.filter = filter;
     if (!filter) {

@@ -35,7 +35,7 @@ export class ProductsService {
     return [...this.products];
   }
 
-  // return product from the service by id
+  // return product from the service by name
   getProductsById(productName: string): Product {
     const foundProduct = this.products.find(product => product.name === productName);
     if (!foundProduct) {
